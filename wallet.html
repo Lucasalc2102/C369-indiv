@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet and Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="service.html">Service</a>
+        <a href="wallet-payment.html">Wallet & Payment</a>
+        <button class="login-button" onclick="showLogin()">Log In</button>
+    </div>
+    <div class="content">
+        <h1>Wallet and Payment</h1>
+        
+        <!-- Payment Section -->
+        <div class="payment-section">
+            <form id="paymentForm">
+                <div class="form-group">
+                    <h2>Add Funds to Wallet</h2>
+                    <form id="addAmountForm">
+                        <div class="form-group">
+                            <label for="amount">Add Amount</label>
+                            <input type="number" id="amount" name="amount" class="form-control" required>
+                        </div>
+                       <!-- <button type="submit" class="btn">Add</button>-->
+                    <label for="paymentAmount">Payment Amount</label>
+                    <input type="number" id="paymentAmount" name="paymentAmount" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" name="paymentMethod" class="form-control" required>
+                        <option value="card1">Credit Card</option>
+                        <option value="card2">PayPal</option>
+                        <option value="card3">Shopee Pay</option>
+                    </select>
+                </div>
+                <p>Your current balance: <span id="walletBalance">$0.00</span></p>
+                <button type="submit" class="btn">Add</button>
+            </form>
+            <p id="paymentMessage"></p>
+        </div>
+    </div>
+    <div id="loginForm" class="login-form">
+        <h2>Log In</h2>
+        <label for="username">User name</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button onclick="login()">Log In</button>
+        <a href="#" onclick="showSignup()">Sign Up</a>
+    </div>
+    <div id="signupForm" class="signup-form">
+        <h2>Sign Up</h2>
+        <label for="newUsername">User name</label>
+        <input type="text" id="newUsername" name="newUsername" required>
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <label for="phone">Phone number</label>
+        <input type="text" id="phone" name="phone" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <button onclick="signup()">Sign Up</button>
+        <a href="#" onclick="showLogin()">Log In</a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 AI-Powered Solutions. All Rights Reserved.</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
