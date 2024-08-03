@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Pay</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .timer {
+            font-size: 2rem;
+            margin: 20px;
+        }
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .qr-code img {
+            width: 200px; /* Adjust size as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered">
+        <h1>Shopee Pay</h1>
+        <div id="timer" class="timer">05:00</div>
+        <p>After making payment, click on the button below the QR code</p>
+        <div class="qr-code">
+            <img src="qr-code.webp" alt="QR Code">
+        </div>
+        <button class="button" id="confirmPaymentButton">Click this after payment has been made</button>
+    </div>
+    <script>
+        function startTimer(duration, display) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const fiveMinutes = 60 * 5,
+                display = document.querySelector('#timer');
+            startTimer(fiveMinutes, display);
+
+            const confirmPaymentButton = document.getElementById('confirmPaymentButton');
+            if (confirmPaymentButton) {
+                confirmPaymentButton.addEventListener('click', () => {
+                    window.location.href = 'confirmation.html';
+                });
+            } else {
+                console.error('Confirm Payment button not found.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Transaction History</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="navbar">  
+        <a href="index.html">Home</a>  
+        <a href="service.html">Service</a>  
+        <a href="wallet.html">Wallet</a>  
+        <a href="contact.html">contact</a>
+        <!--<button class="login-button" onclick="showLogin()">Log In</button>-->
+    </div>  
+    <div class="content">  
+        <h1>Transaction History</h1>  
+
+        <table>  
+            <thead>  
+                <tr>  
+                    <th>Date</th>  
+                    <th>Amount</th>  
+                    <th>Payment Method</th>  
+                </tr>  
+            </thead>  
+            <tbody id="transactionTable">  
+                <!-- Transactions will be populated here by JavaScript -->  
+            </tbody>  
+        </table>  
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 AI-Powered Solutions. All Rights Reserved.</p>
+    </div>  
+    <script>  
+        const transactionTable = document.getElementById('transactionTable');  
+
+        // Load existing transactions from localStorage  
+        function loadTransactions() {  
+            const transactionHistory = JSON.parse(localStorage.getItem('transactionHistory')) || [];  
+            transactionTable.innerHTML = ''; // Clear current table contents  
+
+            transactionHistory.forEach(transaction => {  
+                const row = transactionTable.insertRow();  
+                row.insertCell(0).innerText = transaction.date;  
+                row.insertCell(1).innerText = transaction.amount;  
+                row.insertCell(2).innerText = transaction.method;  
+            });  
+        }  
+
+        // Initial load of transactions  
+        loadTransactions();  
+    </script> 
+</body>  
+</html>

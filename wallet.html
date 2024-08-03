@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">contact</a>
+        <a href="transaction-history.html">Transaction History</a>
+    </div>
+    <div class="content">
+        <h1>Wallet and Payment</h1>
+        <form id="addTransactionForm">
+            <input type="text" id="cardName" name="cardName" placeholder="Card name" class="form-control" required>
+            
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="Card number" class="form-control" required>
+            
+            <label for="expiryDate">Expiry Date</label>
+            <input type="month" id="expiryDate" name="expiryDate" placeholder="Expiry Date" required>
+            
+            <input type="text" id="cvv" name="cvv" placeholder="CVV" class="form-control" required>
+
+            <input type="number" id="amount" name="amount" placeholder="Add Amount" required>
+            
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="" disabled selected>Select Payment Method</option>
+                <option value="creditCard">Credit Card</option>
+                <option value="masterCard">MasterCard</option>
+            </select>
+            
+            <button type="submit">Add</button>
+        </form>
+        <p class="balance">Your current balance: $<span id="walletBalance">0.00</span></p>
+        <button id="shopeePayButton">Shopee Pay</button>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 AI-Powered Solutions. All Rights Reserved.</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

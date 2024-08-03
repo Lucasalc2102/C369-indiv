@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="service.html">Service</a>
+        <a href="wallet.html">Wallet</a>
+        <a href="contact.html">contact</a>
+
+        <button class="login-button" onclick="showLogin()">Log In</button>
+    </div>
+    <div class="content">
+        <h1>Service</h1>
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>AML detection system with 50% AI dependant</h3>
+                <p>$250</p>
+                <button class="buy-button" onclick="buyService(250)">Buy</button>
+            </div>
+            <div class="service-item">
+                <h3>AML detection system with 100% AI dependant</h3>
+                <p>$500</p>
+                <button class="buy-button" onclick="buyService(500)">Buy</button>
+            </div>
+            <div class="service-item">
+                <h3>AML detection system with 100% AI dependant and annually servicing</h3>
+                <p>$1000</p>
+                <button class="buy-button" onclick="buyService(1000)">Buy</button>
+            </div>
+            <div class="service-item">
+                <h3>AML detection system with 100% AI dependant and bi-annually servicing</h3>
+                <p>$1500</p>
+                <button class="buy-button" onclick="buyService(1500)">Buy</button>
+            </div>
+        </div>
+    </div>
+    <div id="loginForm" class="login-form">
+        <h2>Log In</h2>
+        <label for="username">User name</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button onclick="login()">Log In</button>
+        <a href="#" onclick="showSignup()">Sign Up</a>
+    </div>
+    <div id="signupForm" class="signup-form">
+        <h2>Sign Up</h2>
+        <label for="newUsername">User name</label>
+        <input type="text" id="newUsername" name="newUsername" required>
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <label for="phone">Phone number</label>
+        <input type="text" id="phone" name="phone" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <button onclick="signup()">Sign Up</button>
+        <a href="#" onclick="showLogin()">Log In</a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 AI-Powered Solutions. All Rights Reserved.</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

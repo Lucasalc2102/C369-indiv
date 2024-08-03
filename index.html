@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="service.html">Service</a>
+        <a href="wallet.html">Wallet</a>
+        <a href="contact.html">contact</a>
+        <button class="login-button" onclick="showLogin()">Log In</button>
+    </div>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Our AI-Powered Solutions</h1>
+            <p>Transforming financial security with cutting-edge AI technology</p>
+        </div>
+        <div class="hero-image">
+            <img src="AI.jpg" alt="AI Technology">
+        </div>
+    </div>
+    <div class="content">
+        <h1>About Us</h1>
+        <p>We are a company that specializes in AI-powered 
+            AML transaction monitoring solutions that allow 
+            payment fintech and banks to expand their business 
+            opportunities and grow revenues through trusted and
+            reliable cross-border and domestic payments. Our groundbreaking solution 
+            improves customer satisfaction, reduces compliance 
+            costs, and increases risk coverage. Using an advanced form of 
+            AI called "artificial intelligence intuition" 
+            and a family of proprietary, patented machine learning algorithms, we dynamically
+            analyze data without relying on 
+            predefined scenarios or models, enabling effective detection and prevention of money
+            laundering and other financial crimes.</p>
+        <div class="features">
+            <div class="feature">
+                <img src="OIP.jpg" alt="AML">
+                <h3>AML Solutions</h3>
+                <p>Our AML solutions ensure compliance and mitigate risks efficiently.</p>
+            </div>
+            <div class="feature">
+                <img src="download.jpg" alt="AI">
+                <h3>Artificial Intelligence</h3>
+                <p>Leveraging AI to provide advanced insights and automation.</p>
+            </div>
+            <div class="feature">
+                <img src="IT infurstructure.jpg" alt="IT">
+                <h3>IT Infrastructure</h3>
+                <p>Robust IT infrastructure to support scalable and secure operations.</p>
+            </div>
+        </div>
+    </div>
+    <div id="loginForm" class="login-form">
+        <h2>Log In</h2>
+        <label for="username">User name</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button onclick="login()">Log In</button>
+        <a href="#" onclick="showSignup()">Sign Up</a>
+    </div>
+    <div id="signupForm" class="signup-form">
+        <h2>Sign Up</h2>
+        <label for="newUsername">User name</label>
+        <input type="text" id="newUsername" name="newUsername" required>
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <label for="phone">Phone number</label>
+        <input type="text" id="phone" name="phone" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <button onclick="signup()">Sign Up</button>
+        <a href="#" onclick="showLogin()">Log In</a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 AI-Powered Solutions. All Rights Reserved.</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
