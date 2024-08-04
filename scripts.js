@@ -1,3 +1,13 @@
+//I declare that this code was written by me
+//I will not copy or let others copy my code
+//i understand that copying of codes is under plagerism
+
+//Lucas Alcantra
+//23009402
+//E66N
+//4/8/2024 2:52 pm-->
+
+
 document.addEventListener("DOMContentLoaded", function() {
     // Initialize forms and load data
     initForms();
